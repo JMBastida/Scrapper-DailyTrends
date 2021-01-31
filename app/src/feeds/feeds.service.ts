@@ -28,7 +28,8 @@ export class FeedsService {
   async findFeeds(): Promise<Feed[]> {
     let feeds = await this.triggerScrapper(NewspaperSources.elpais);
     feeds = feeds.concat(await this.triggerScrapper(NewspaperSources.elmundo));
-    return this.feedModel.find().exec();
+    feeds = feeds.concat(await this.feedModel.find().exec());
+    return feeds;
   }
 
   async createFeed(createFeedDto: FeedDto): Promise<Feed> {
