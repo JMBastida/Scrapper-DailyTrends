@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  angular:
+    build: angular-client
+    ports:
+      - "4200:4200"
+      
+  mongo:
+    image: mongo:latest
+    environment:
+      - MONGODB_DATABASE="feeds"
+    volumes:
+      - mongo-data:/data/db
+    restart: always
+    ports:
+      - 27017:27017
+
+  api:
+    container_name: jorge_scrapping-api
+    build:
+      context: ./app
+      target: development
+    volumes:
+      - ./app:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm run start:dev
+    ports:
+      - 8080:3000
+    depends_on:
+      - mongo
+    restart: always
+    environment:
+      MONGO_URL: mongo
+
+volumes:
+  mongo-data: 
+
+      
