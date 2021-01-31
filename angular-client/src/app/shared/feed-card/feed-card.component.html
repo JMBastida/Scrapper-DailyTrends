@@ -1,10 +1,33 @@
-<div _ngcontent-c9="" class="col-lg-6">
+<div id="card" _ngcontent-c9="">
   <div
     _ngcontent-c9=""
     class="custom-tab-content flex-column flex-md-row"
     type="pills"
   >
     <div class="tab-content">
+      <div class="row">
+        <div class="col-6">
+          <img
+            _ngcontent-c11=""
+            alt="Rounded image"
+            class="img-fluid rounded </div> </div> shadow"
+            [src]="
+              !new.image
+                ? '../../assets/no-image-1771002-1505134.png'
+                : new.image
+            "
+            style="width: 200px"
+          />
+        </div>
+        <div class="col-6">
+          <p class="small text-primary">
+            <b>{{ new.source }}</b>
+          </p>
+          <p class="small text-info">
+            <b>{{ new.publisher }}</b>
+          </p>
+        </div>
+      </div>
       <div
         role="tabpanel"
         class="tab-pane active"
@@ -12,10 +35,28 @@
         id="ngb-tab-9-panel"
         aria-expanded="true"
       >
-        <h2>{{new.title}}</h2>
+        <h2 class="display-3">{{ new.title }}</h2>
         <p _ngcontent-c9="" class="description">
-          {{new.body}}
+          {{ new.body }}
         </p>
+      </div>
+      <div class="row" style="margin-left: auto; margin-right: auto;">
+        <button
+            _ngcontent-c5=""
+            class="btn btn-sm btn-outline-warning"
+            type="button"
+            (click)="editFeed()"
+          >
+            Editar Feed
+          </button>
+          <button
+            _ngcontent-c5=""
+            class="btn btn-sm btn-outline-danger"
+            type="button"
+            (click)="deleteFeed()"
+          >
+            Borrar Feed
+          </button>
       </div>
     </div>
   </div>

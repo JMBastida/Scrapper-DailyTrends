@@ -14,7 +14,7 @@ export class FeedDto {
   @IsUrl()
   readonly image!: string;
   @ApiProperty({ enumName: NewspaperSources.otro })
-  readonly source = NewspaperSources.otro;
+  readonly source: NewspaperSources.otro;
   @ApiProperty()
   @IsString()
   readonly publisher!: string;

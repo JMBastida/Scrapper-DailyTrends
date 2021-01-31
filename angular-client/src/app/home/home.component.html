@@ -1,4 +1,24 @@
-<p>ola</p>
-<div class="body" *ngFor="let feed of this.feeds$ | async">
-  <feed-card [new]="feed"></feed-card>
-</div>
+<main>
+  <div class="position-relative">
+    <div class="container py-lg-md d-flex">
+      <div class="row">
+        <div class="col-10">
+          <h1 class="display-2">Let's Scrap some news</h1>
+        </div>
+        <div class="col-2">
+          <button
+            _ngcontent-c5=""
+            class="btn btn-sm btn-outline-success"
+            type="button"
+            (click)="newFeed()"
+          >
+            Create New Feed
+          </button>
+        </div>
+        <div class="col-6 mt-5" *ngFor="let feed of this.feeds$ | async">
+          <feed-card [new]="feed"></feed-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

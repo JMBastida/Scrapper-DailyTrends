@@ -1,0 +1,15 @@
+<div
+  class="modal overflow-y-auto overlayCustom show"
+  (click)="onOverlayClicked($event)"
+>
+  <div class="modal-content dialogCustom" (click)="onDialogClicked($event)">
+    <button
+      class="closeModal"
+      (click)="this.close({})"
+      type="button"
+    >
+      <b>x</b>
+    </button>
+    <ng-template appInsertion> </ng-template>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.overlayCustom {
+  background-color: rgba(27, 26, 26, 0.3);
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-left: 0px;
+  z-index: 53;
+  align-items: center;
+  justify-content: center;
+}
+.dialogCustom {
+  position: relative;
+  width: auto;
+  margin: 10px;
+
+  .modal.show & {
+    transform: translate(0, 0);
+  }
+}
+
+button.closeModal {
+  width: fit-content;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  position: relative;
+}
+
+.closeModal {
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 0.87;
+  left: 92%;
+  top: 5%;
+  color: #1b2e4b;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}

@@ -1,0 +1,83 @@
+<div _ngcontent-c12="" class="card-body px-lg-5 py-lg-5">
+  <div _ngcontent-c12="" class="text-center text-muted mb-4">
+    <small _ngcontent-c12="">Feed Form</small>
+  </div>
+    <form
+      _ngcontent-c12=""
+      novalidate=""
+      role="form"
+      class="ng-untouched ng-pristine ng-valid"
+      [formGroup]="form"
+      (submit)="close($event)"
+    >
+    <div _ngcontent-c12="" class="form-group mb-3">
+      <div _ngcontent-c12="" class="input-group input-group-alternative">
+        <div _ngcontent-c12="" class="input-group-prepend">
+          <span _ngcontent-c12="" class="input-group-text"
+            ><i _ngcontent-c12="" class="ni ni-email-83"></i
+          ></span>
+        </div>
+        <input
+          _ngcontent-c12=""
+          class="form-control"
+          formControlName="title"
+          placeholder="Titulo"
+          type="text"
+        />
+      </div>
+    </div>
+    <div _ngcontent-c12="" class="form-group mb-3">
+      <div _ngcontent-c12="" class="input-group input-group-alternative">
+        <div _ngcontent-c12="" class="input-group-prepend">
+          <span _ngcontent-c12="" class="input-group-text"
+            ><i _ngcontent-c12="" class="ni ni-email-83"></i
+          ></span>
+        </div>
+        <input
+          _ngcontent-c12=""
+          formControlName="body"
+          class="form-control"
+          placeholder="Descripción"
+          type="text"
+        />
+      </div>
+    </div>
+    <div _ngcontent-c12="" class="form-group mb-3">
+      <div _ngcontent-c12="" class="input-group input-group-alternative">
+        <div _ngcontent-c12="" class="input-group-prepend">
+          <span _ngcontent-c12="" class="input-group-text"
+            ><i _ngcontent-c12="" class="ni ni-email-83"></i
+          ></span>
+        </div>
+        <input
+          _ngcontent-c12=""
+          formControlName="publisher"
+          class="form-control"
+          placeholder="Autor"
+          type="text"
+        />
+      </div>
+    </div>
+    <div _ngcontent-c12="" class="form-group mb-3">
+      <div _ngcontent-c12="" class="input-group input-group-alternative">
+        <div _ngcontent-c12="" class="input-group-prepend">
+          <span _ngcontent-c12="" class="input-group-text"
+            ><i _ngcontent-c12="" class="ni ni-email-83"></i
+          ></span>
+        </div>
+        <input
+          _ngcontent-c12=""
+          formControlName="image"
+          class="form-control"
+          placeholder="Url Foto"
+          type="text"
+        />
+      </div>
+    </div>
+    <div _ngcontent-c12="" class="text-center">
+      <button _ngcontent-c12="" class="btn btn-success my-4" type="submit">
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>

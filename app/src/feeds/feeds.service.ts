@@ -110,7 +110,7 @@ export class FeedsService {
       .trim();
     let image = html.find('source').attr('srcset');
     if (image) {
-      image = image.split(',').pop(); //they ve different images with differernt sizes so we get ther bigger(last one)
+      image = image.split(',').pop().split(' ').shift(); //they ve different images with differernt sizes so we get ther bigger(last one)
     }
 
     return {

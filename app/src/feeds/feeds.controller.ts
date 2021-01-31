@@ -24,8 +24,8 @@ export class FeedsController {
   }
 
   @Post()
-  async createFeed(@Body() createFeedDto: FeedDto): Promise<void> {
-    await this.feedsService.createFeed(createFeedDto);
+  async createFeed(@Body() createFeedDto: FeedDto): Promise<Feed> {
+    return await this.feedsService.createFeed(createFeedDto);
   }
 
   @Put(':feedId')
