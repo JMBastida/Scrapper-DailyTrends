@@ -1,1 +1,4 @@
-<feed-card></feed-card>
+<p>ola</p>
+<div class="body" *ngFor="let feed of this.feeds$ | async">
+  <feed-card [new]="feed"></feed-card>
+</div>

@@ -1,4 +1,10 @@
 # Jorge News Scrapper
+```docker
+docker-compose up
+```
+> Angular: http://0.0.0.0:80/
+
+> Docs: http://0.0.0.0:8080/docs
 
 ## Description
 
@@ -26,4 +32,4 @@ Cuando un usuario abre DailyTrends, se encuentra con las 5 noticias de portada d
 
 ### License
 
-Nest is [MIT licensed](LICENSE).
+[MIT licensed](LICENSE).
