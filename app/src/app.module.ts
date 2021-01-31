@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 import { FeedsModule } from './feeds/feeds.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/feeds'), FeedsModule],
+  imports: [MongooseModule.forRoot('mongodb://mongo/feeds'), FeedsModule],
   controllers: [AppController],
   providers: [AppService],
 })
