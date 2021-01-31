@@ -4,6 +4,6 @@ import { FeedsService } from './feeds.service';
 
 @Module({
   controllers: [FeedsController],
-  providers: [FeedsService]
+  providers: [FeedsService],
 })
 export class FeedsModule {}
